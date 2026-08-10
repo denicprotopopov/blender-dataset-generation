@@ -11,7 +11,7 @@ A Blender/Cycles script that renders a synthetic COCO-style object detection + 6
 
 ## Project setup (in Blender)
 
-1. **Blender version:** developed against **Blender 4.x** with the Cycles render engine.
+1. **Blender version:** developed against **Blender 4.x** with the Cycles render engine. Compatibility with 5.x is not checked.
 2. **Open/create a `.blend` file** and add the objects you want to detect.
 3. **Name each target object `TargetObject...`** (e.g. `TargetObject_bottle`, `TargetObject_mug`). The script auto-discovers every object whose name starts with `TargetObject` and sorts them alphabetically — this order defines the COCO `category_id`. Any object not named this way (and not the camera) gets **deleted** by `setup_scene()`, so keep your scene clean and only leave target objects + camera in it.
 4. Objects should be roughly centered at the world origin with a sensible real-world scale (meters) — the script exports them at `base_scale_for_export` and randomizes location within a small radius around the origin for rendering.
